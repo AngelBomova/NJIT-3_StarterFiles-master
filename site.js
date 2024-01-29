@@ -1,7 +1,12 @@
 /* SITE.JS: THIS FILE CONTAINS THE METHODS/FUNCTIONS AND VARIABLES CONTROLLING YOUR SITE
+
 //
 */
-
+root:{
+      title: "IMDB + YourNames Top 8 Movies";
+      owner: "Angel";
+      github: "https://angelbomova.github.io/NJIT-3_StarterFiles-master/";
+}
 /* NOTE: MOVIES.JSON CONTAINS A LIST OF MOVIES AND ACCOMPANYING METADATA
 //
 //    They are in the following format:
