@@ -2,11 +2,6 @@
 
 //
 */
-root:{
-      title: "IMDB + YourNames Top 8 Movies";
-      owner: "Angel";
-      github: "https://angelbomova.github.io/NJIT-3_StarterFiles-master/";
-}
 /* NOTE: MOVIES.JSON CONTAINS A LIST OF MOVIES AND ACCOMPANYING METADATA
 //
 //    They are in the following format:
@@ -24,8 +19,6 @@ root:{
 //
 // FOR STEP 16, ADD THREE OF YOUR OWN FAVORITE MOVIES WITH METADATA TO THE END OF THE JSON FILE LIST
 */
-
-
 const vue_app = Vue.createApp({
       // This automatically imports your movies.json file and puts it into
       //   the variable: movies
@@ -37,9 +30,19 @@ const vue_app = Vue.createApp({
       data() {
         return {
             // This holds your movies.json data.
-            movies: [],
+            movies: [
+                  {title: 'IMDB + Angel Bomova’s Top 8 Movies', owner: 'Angel Bomova',  github: 'https://angelbomova.github.io/NJIT-3_StarterFiles-master/'}
+                  
+            ],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-         
+            let app = new Vue({
+                  el: '#app',
+                  data: {
+                    title: "IMDB + Angel’s Top 8 Movies",
+                    owner: "Angel",
+                    github: "https://angelbomova.github.io/NJIT-3_StarterFiles-master/"
+                  }
+                });
       }
     },
       methods: {
