@@ -35,18 +35,19 @@ const vue_app = Vue.createApp({
                   
             ],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-            let app = new Vue({
-                  el: '#app',
-                  data: {
-                    title: "IMDB + Angel’s Top 8 Movies",
-                    owner: "Angel",
-                    github: "https://angelbomova.github.io/NJIT-3_StarterFiles-master/"
-                  }
-                });
+            // let app = new Vue({
+            //       el: '#app',
+            //       data: {
+            //         title: "IMDB + Angel’s Top 8 Movies",
+            //         owner: "Angel",
+            //         github: "https://angelbomova.github.io/NJIT-3_StarterFiles-master/"
+            //       }
+            //     });
       }
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+            
       }
 })
 
