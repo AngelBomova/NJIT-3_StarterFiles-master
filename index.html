@@ -53,18 +53,29 @@ SystemJS.import("/Areas/Admin/Content/js/vuejs/EditProductVariantsController.js"
 	            <div class="thumbnail">
 
 						<img class="poster img-fluid" />
-						<div class="imageInfo">{{posterindex}}</div>
+						<div class="imageInfo">{{posterindex.movies}}</div>
 
-						<p class="title">{{title}} ({{country}})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{iscore}} </p>
-						<p class="runtime">Runtime: {{runtime}}</p>
-						<p class="released">Released: {{released}} | Rated: {{rating}}</p>
+						<p class="title">{{title.movies}} ({{country.movies}})</p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{iscore.movies}} </p>
+						<p class="runtime">Runtime: {{runtime.movies}}</p>
+						<p class="released">Released: {{released.movies}} | Rated: {{rating.movies}}</p>
 						<p class="websites">Websites: <a> imdb </a> | <a>website</a></p>
 
 			            <div class="social">
 			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{likes.movies}}</p>
 			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{dislikes.movies}}</p>
 			            </div>
+
+						<div v-if="showMovies">
+							<ul>
+								<li v-for="book in filteredMovies" :class="{fav: movie.isFav}" @click="toggleFav(movie)">
+									<h3> {{movie.title}}</h3>
+									<p> {{movie.owner}} </p>
+				
+								</li>
+							</ul>
+						</div>
+
 	            </div>
 	        </div>
 
@@ -74,7 +85,7 @@ SystemJS.import("/Areas/Admin/Content/js/vuejs/EditProductVariantsController.js"
 	    <div class="footer">
 	      <div class="container">
 			<a id="github" class="btn btn-lg btn-warning">
-				<i class="bi bi-github me-2"></i>{{owner}}
+				<i class="bi bi-github me-2"></i>{{owner.movies}}
 	  		</a>
 	      </div>
 	    </div>
